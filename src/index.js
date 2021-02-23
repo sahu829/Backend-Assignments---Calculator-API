@@ -31,7 +31,7 @@ app.post("/add",(req,res)=>{
     if(parseFloat(num1)<-1000000||parseFloat(num2)<-1000000){
         res.send({
             status:"error",
-            message:"Overflow",
+            message:"Underflow",
             sum:undefined
         });
         return;
@@ -50,7 +50,7 @@ app.post("/add",(req,res)=>{
         }else{
             res.send({
                 status:"error",
-                message:"overflow",
+                message:"Overflow",
                 sum:undefined
             });
             return;
@@ -58,7 +58,7 @@ app.post("/add",(req,res)=>{
     }else if(isNaN(parseFloat(num1)||isNaN(parseFloat(num2)))){
         res.send({
             status:"failure",
-            message:"Invalid data type",
+            message:"Invalid data types",
             sum:undefined
         });
         return;
@@ -81,7 +81,7 @@ app.post("/sub",(req,res)=>{
     if(parseFloat(num1)<-1000000||parseFloat(num2)<-1000000){
         res.send({
             status:"error",
-            message:"Overflow",
+            message:"Underflow",
             difference:undefined
         });
         return;
@@ -100,7 +100,7 @@ app.post("/sub",(req,res)=>{
     }else if(isNaN(parseFloat(num1)||isNaN(parseFloat(num2)))){
         res.send({
             status:"failure",
-            message:"Invalid data type",
+            message:"Invalid data types",
             difference:undefined
         });
         return;
@@ -123,7 +123,7 @@ app.post("/multiply",(req,res)=>{
     if(parseFloat(num1)<-1000000||parseFloat(num2)<-1000000){
         res.send({
             status:"error",
-            message:"Overflow",
+            message:"Underflow",
             result:undefined
         });
         return;
@@ -142,7 +142,7 @@ app.post("/multiply",(req,res)=>{
         }else{
             res.send({
                 status:"error",
-                message:"overflow",
+                message:"Overflow",
                 result:undefined
             });
             return;
@@ -173,7 +173,7 @@ app.post("/divide",(req,res)=>{
     if(parseFloat(num1)<-1000000||parseFloat(num2)<-1000000){
         res.send({
             status:"error",
-            message:"Overflow",
+            message:"Underflow",
             result:undefined
         });
         return;
@@ -200,7 +200,7 @@ app.post("/divide",(req,res)=>{
     }else if(isNaN(parseFloat(num1)||isNaN(parseFloat(num2)))){
         res.send({
             status:"failure",
-            message:"Invalid data type",
+            message:"Invalid data types",
             result:undefined
         });
         return;
